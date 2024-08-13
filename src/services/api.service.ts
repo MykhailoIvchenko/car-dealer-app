@@ -1,7 +1,12 @@
-const apiRequest = async (url: string, options: Record<string, any>) => {
+import { BASE_URL_FALLBACK } from '@/utils/consts';
+
+const apiRequest = async (
+  url: string,
+  options?: Record<string, any>,
+): Promise<any> => {
   let response;
 
-  const BASE_URL = process.env.NEXT_API_BASE_URL;
+  const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || BASE_URL_FALLBACK;
 
   if (options) {
     response = await fetch(`${BASE_URL}${url}`, options);
@@ -16,6 +21,6 @@ const apiRequest = async (url: string, options: Record<string, any>) => {
   return response.json();
 };
 
-const apiService = {
+export const apiService = {
   apiRequest,
 };
