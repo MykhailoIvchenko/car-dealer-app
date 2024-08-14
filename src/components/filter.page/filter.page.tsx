@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import VehicleTypesSelect from '../vehicle.types.select/vehicle.types.select';
 import { useVehicleTypesList } from '@/hooks/use.vehicle.types.list';

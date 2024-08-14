@@ -1,7 +1,6 @@
-'use client';
 import FilterPage from '@/components/filter.page/filter.page';
 import Loader from '@/components/loader/loader';
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
